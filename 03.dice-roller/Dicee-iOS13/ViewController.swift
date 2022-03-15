@@ -12,6 +12,17 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var diceImageView1: UIImageView!
     @IBOutlet weak var diceImageView2: UIImageView!
+    
+    private let diceArray: [UIImage] = [
+        #imageLiteral(resourceName: "DiceOne"), // #imageLiteral(resourName: "DiceOne")
+        #imageLiteral(resourceName: "DiceTwo"), // #imageLiteral(resourName: "DiceTwo")
+        #imageLiteral(resourceName: "DiceThree"), // #imageLiteral(resourName: "DiceThree")
+        #imageLiteral(resourceName: "DiceFour"), // #imageLiteral(resourName: "DiceFour")
+        #imageLiteral(resourceName: "DiceFive"), // #imageLiteral(resourName: "DiceFive")
+        #imageLiteral(resourceName: "DiceSix")  // #imageLiteral(resourName: "DiceSix")
+     ]
+     
+    /*
     private let diceArray: [UIImage] = [
         UIImage(named: "DiceOne")!,
         UIImage(named: "DiceTwo")!,
@@ -20,6 +31,7 @@ class ViewController: UIViewController {
         UIImage(named: "DiceFive")!,
         UIImage(named: "DiceSix")!
     ]
+     */
     
     @IBAction func rollButtonPressed(_ sender: UIButton) {
         diceImageView1.image = diceArray.randomElement()
